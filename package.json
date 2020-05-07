@@ -9,7 +9,9 @@
         "prebuild": "rimraf dist",
         "build": "rollup -c",
         "lint": "eslint $PWD/'**/*.js'",
-        "lint:fix": "prettier-eslint $PWD/'**/*.js' --write"
+        "lint:fix": "prettier-eslint $PWD/'**/*.js' --write",
+        "storybook": "start-storybook -p 9001 -c storybook",
+        "storybook:build": "build-storybook -c storybook"
     },
     "husky": {
         "hooks": {
@@ -41,6 +43,11 @@
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
         "@babel/preset-react": "^7.9.4",
+        "@storybook/addon-options": "^5.3.18",
+        "@storybook/addons": "^5.3.18",
+        "@storybook/react": "^5.3.18",
+        "@storybook/theming": "^5.3.18",
+        "babel-loader": "^8.1.0",
         "eslint": "^6.8.0",
         "eslint-config-standard": "^14.1.1",
         "eslint-plugin-import": "^2.20.2",
@@ -52,6 +59,8 @@
         "lint-staged": "^10.2.2",
         "prettier-eslint": "^9.0.1",
         "prettier-eslint-cli": "^5.0.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "rimraf": "^3.0.2",
         "rollup": "^2.7.6",
         "rollup-plugin-babel": "^4.4.0",
@@ -64,5 +73,6 @@
     },
     "engines": {
         "node": ">=8"
-    }
+    },
+    "dependencies": {}
 }
