@@ -16,7 +16,9 @@
         "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
         "test:staged": "jest --findRelatedTests",
         "storybook": "start-storybook -p 9001 -c storybook",
-        "storybook:build": "build-storybook -c storybook"
+        "storybook:build": "build-storybook -c storybook",
+        "predeploy": "npm run storybook:build",
+        "deploy": "gh-pages -d storybook-static"
     },
     "husky": {
         "hooks": {
@@ -44,7 +46,7 @@
     "bugs": {
         "url": "https://github.com/AZYHAR/react-spinners-sample/issues"
     },
-    "homepage": "https://github.com/AZYHAR/react-spinners-sample#readme",
+    "homepage": "https://azyhar.github.io/react-spinners-sample/",
     "devDependencies": {
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
