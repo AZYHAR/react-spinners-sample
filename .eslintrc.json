@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard"
+        "standard",
+        "plugin:jest/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -18,9 +19,6 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-    }
+    "plugins": ["react"],
+    "rules": {}
 }

@@ -10,6 +10,9 @@
         "build": "rollup -c",
         "lint": "eslint $PWD/'**/*.js'",
         "lint:fix": "prettier-eslint $PWD/'**/*.js' --write",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
         "storybook": "start-storybook -p 9001 -c storybook",
         "storybook:build": "build-storybook -c storybook"
     },
@@ -47,20 +50,24 @@
         "@storybook/addons": "^5.3.18",
         "@storybook/react": "^5.3.18",
         "@storybook/theming": "^5.3.18",
+        "babel-jest": "^26.0.1",
         "babel-loader": "^8.1.0",
         "eslint": "^6.8.0",
         "eslint-config-standard": "^14.1.1",
         "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jest": "^23.9.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-react": "^7.19.0",
         "eslint-plugin-standard": "^4.0.1",
         "husky": "^4.2.5",
+        "jest": "^26.0.1",
         "lint-staged": "^10.2.2",
         "prettier-eslint": "^9.0.1",
         "prettier-eslint-cli": "^5.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "react-test-renderer": "^16.13.1",
         "rimraf": "^3.0.2",
         "rollup": "^2.7.6",
         "rollup-plugin-babel": "^4.4.0",
@@ -74,5 +81,10 @@
     "engines": {
         "node": ">=8"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "jest": {
+        "moduleNameMapper": {
+            "\\.(css|less)$": "<rootDir>/mocks/styles.js"
+        }
+    }
 }
