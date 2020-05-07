@@ -1,8 +1,14 @@
 import React from 'react'
-import { Ellipsis } from 'react-spinners-sample'
+import { Ellipsis, Ripple, Ring } from 'react-spinners-sample'
 
 function App () {
-  return <Ellipsis />
+  return (
+    <>
+      <Ellipsis />
+      <Ripple />
+      <Ring />
+    </>
+  )
 }
 
 export default App
