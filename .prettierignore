@@ -6,6 +6,8 @@ dist
 
 node_modules
 
+storybook-static
+
 *.html
 
-storybook-static
+*.md
